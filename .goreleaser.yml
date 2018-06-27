@@ -1,0 +1,28 @@
+project_name: massue
+release:
+  github:
+    owner: bjorand
+    name: massue
+brew:
+  install: bin.install "massue"
+builds:
+- goos:
+  - linux
+  - darwin
+  goarch:
+  - amd64
+  goarm:
+  - "6"
+  main: .
+  ldflags: -s -w -X main.version={{.Version}} -X main.gitRef={{.Commit}}
+  binary: massue
+archive:
+  format: tar.gz
+  name_template: '{{ .Binary }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{
+    .Arm }}{{ end }}'
+  files:
+  - LICENSE
+snapshot:
+  name_template: SNAPSHOT-{{ .Commit }}
+checksum:
+  name_template: '{{ .ProjectName }}_{{ .Version }}_checksums.txt'
