@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  name = "github.com/cactus/go-statsd-client"
+  packages = ["statsd"]
+  revision = "138b925ccdf617776955904ba7759fce64406cec"
+  version = "v3.1.1"
+
+[[projects]]
   name = "github.com/klauspost/compress"
   packages = ["flate","gzip","zlib"]
   revision = "5fb1f31b0a61e9858f12f39266e059848a5f1cea"
@@ -28,6 +34,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "287c712b343fb4476baec2a98dd76fae1217d9414d5215fc6eeceac5a335f9e0"
+  inputs-digest = "fd6fddd1c984f9be413fcd12a9e74f8fcabee83523b287083e8c125aa99555d7"
   solver-name = "gps-cdcl"
   solver-version = 1
